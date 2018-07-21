@@ -7,5 +7,6 @@ Route::namespace('Admin')->prefix('admin')->middleware('admin')->group(function 
     Route::get('/','Index@index');
     Route::get('/logout','Index@logout');
     Route::get('/welcome','Index@welcome');
+    Route::resources(['cate'=>'Category']);
 });
 

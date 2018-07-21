@@ -1,18 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>后台首页</title>
-	<meta name="renderer" content="webkit|ie-comp|ie-stand">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="stylesheet" href="{{asset('/css/font.css')}}">
-    <link rel="stylesheet" href="{{asset('/css/xadmin.css')}}">
-    <script type="text/javascript" src="{{asset('/js/jquery.min.js')}}"></script>
-    <script src="{{asset('/lib/layui.js')}}" charset="utf-8"></script>
-    <script type="text/javascript" src="{{asset('/js/xadmin.js')}}"></script>
-
+@include('admin.index.head')
 </head>
 <body>
     <!-- 顶部开始 -->
@@ -36,7 +22,7 @@
             <a href="javascript:;">{{session('adminName.name')}}</a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
               <dd><a onclick="x_admin_show('个人信息','http://www.baidu.com')">个人信息</a></dd>
-              <dd><a onclick="x_admin_show('切换帐号','http://www.baidu.com')">切换帐号</a></dd>
+              <dd><a onclick="x_admin_show('修改密码','http://www.baidu.com')">修改密码</a></dd>
               <dd><a href="/admin/logout">退出</a></dd>
             </dl>
           </li>
@@ -127,7 +113,7 @@
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="cate.html">
+                        <a _href="{{url('/admin/cate')}}">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>多级分类</cite>
                         </a>

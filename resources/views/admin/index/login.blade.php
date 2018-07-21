@@ -1,22 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{app()->getLocale()}}">
-<head>
-	<meta charset="UTF-8">
-	<title>后台登录</title>
-	<meta name="renderer" content="webkit|ie-comp|ie-stand">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="{{asset('/css/font.css')}}">
-	<link rel="stylesheet" href="{{asset('/css/xadmin.css')}}">
-    <script type="text/javascript" src="{{asset('/js/jquery.min.js')}}"></script>
-    <script src="{{asset('/lib/layui.js')}}" charset="utf-8"></script>
-    <script type="text/javascript" src="{{asset('/js/xadmin.js')}}"></script>
-
+@include('admin.index.head')
 </head>
 <body class="login-bg">
-    
     <div class="login layui-anim layui-anim-up">
         <div style="text-align:center;color: red;font-size: 23px;" id="msg"></div>
         <div class="message">管理登录</div>

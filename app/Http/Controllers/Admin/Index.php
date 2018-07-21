@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\models\Admin;
+use App\Models\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Common\AdminCommon;
 use Illuminate\Support\Facades\Validator;
@@ -16,7 +16,7 @@ class Index extends AdminCommon
     public function index ()
     {
         //print_r(session('admin'));
-        return view('admin.index.index');
+        return view('admin.index.index')->with('title','后台管理');
     }
     public function welcome()
     {
@@ -28,7 +28,7 @@ class Index extends AdminCommon
      */
     public function login ()
     {
-        return view('admin.index.login');
+        return view('admin.index.login')->with('title','后台登陆');
     }
 
     /**
@@ -70,8 +70,8 @@ class Index extends AdminCommon
     }
 
     /**
-     * @param Request $request
      * 注销
+     * @param Request $request
      */
     public function logout(Request $request)
     {

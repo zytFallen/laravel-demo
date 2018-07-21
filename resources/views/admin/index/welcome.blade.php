@@ -80,7 +80,7 @@
                     <tbody>
                         <tr>
                             <td >
-                                <a class="x-a" href="/" target="_blank">新版x-admin 2.0上线了</a>
+                                <a class="x-a" href="/" target="_blank">z</a>
                             </td>
                         </tr>
                     </tbody>
@@ -94,7 +94,7 @@
                     <tbody>
                         <tr>
                             <th>系统版本</th>
-                            <td>1.0.180420</td></tr>
+                            <td>1.0</td></tr>
                         <tr>
                             <th>服务器地址</th>
                             <td>{{request()->getHttpHost()}}</td></tr>
@@ -102,10 +102,13 @@
                             <th>操作系统</th>
                             <td>{{php_uname()}}</td></tr>
                         <tr>
-                            <th>PHP版本</th>
-                            <td>{{phpversion()}}</td></tr>
+                            <th>Server</th>
+                            <td>{{array_get($_SERVER, 'SERVER_SOFTWARE')}}</td></tr>
                         <tr>
-                            <th>PHP运行方式</th>
+                            <th>PHP VERSION</th>
+                            <td>{{'PHP/'.PHP_VERSION}} </td></tr>
+                        <tr>
+                            <th>CGI</th>
                             <td>{{php_sapi_name()}}</td></tr>
                         <tr>
                             <th>Laravel</th>
@@ -119,11 +122,6 @@
             <div class="layui-field-box">
                 <table class="layui-table">
                     <tbody>
-                        <tr>
-                            <th>版权所有</th>
-                            <td>xxxxx(xxxx)
-                                <a href="http://www.xxx.com/" class='x-a' target="_blank">访问官网</a></td>
-                        </tr>
                         <tr>
                             <th>开发者</th>
                             <td>zytFallen</td></tr>
